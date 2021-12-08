@@ -100,6 +100,51 @@
             margin-left: -40px;
           
             }
+            
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
         </style>
     </head>
     <body>
@@ -108,11 +153,19 @@
         <h4 class="description">Hello, and welcome to my webpage! Here, you can learn some of the best tips for coding your website from scratch!</h4>
         </div>
         
+        <br>
+        <div class="topnav">
+  <a class="active" href="#basics">Basics</a>
+  <a href="#Formats">Formats</a>
+  <a href="#extras">Extra Tips</a>
+  <a href="#buying">Buying</a>
+  <a href="#Footer">Credits</a>
+</div>
         
         <h3 class="Header">Basics of Web Development<br></h3>
     
         
-        <ul class="Information">
+        <ul id="basics" class="Information">
             <h4>We use a type of programming language called HTML which stands for Hyper Text Markup Code. Many developers also use CSS to help color and style their websites, to make them look nice.</h4>
             
         	<li class="M-Fact">At the most basic, you put different words like html, head, body, etc. inside of two '< >' symbols, and text, links, and more go after that, with "<_/>" to close.
@@ -126,13 +179,13 @@
             <li class="M-Fact">If you are a beginner trying to learn to code, I recommend checking out W3schools, with many lessons on all the aspects of learning HTML and CSS.</li>
         </ul> 
 		
-        <h3 class="Header">Formats for your Website<br></h1>
+        <h3 id="Formats" class="Header">Formats for your Website<br></h1>
         <iframe width=50% height=300px src="https://www.youtube.com/embed/7y2qM_tLQHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <ul class="Mars-List">
         	<h3 class="M-Fact">There are multiple types of ways to format your website, and in this video, I list some of the  best formats for your website, like the brochure, online store, and more! At least one of these five formats will fulfill your business's website needs.</h3>
         	
         
-        <h3 class="Header">Additional Tips to Add to your Website<br></h1>
+        <h3 id="extras" class="Header">Additional Tips to Add to your Website<br></h1>
         
         <ul class="Mars-List">
        
@@ -188,7 +241,7 @@ Use colorful photos that aren’t straight from shutterstock. People like to see
 
 
       
-		<h3 class="Header">Where Should I Buy and Host a Website?</h3>	
+		<h3 id="buying" class="Header">Where Should I Buy and Host a Website?</h3>	
 		<p class="M-Fact">Google domains is a great way to get a website, for under 20 dollars per year. Github repositories also can give you a free web hosting service, however, if your website is extremely javascript oriented, this might not be the best way for you. But, if you have a simple website to teach something or a publication website with a few ads, this may work out. Then there is GoDaddy and others for a slightly higher price, but those can help you make your website as amazing as possible for your customers and/or your readers. On the other hand, if you are planning to program your entire website from scratch, Bluehost is a great web hosting company. Starting at around $3 a month, you can get a WordPress builder, and over 300 design templates. It can also include a free domain for your first year, with decent customer support 24/7. Their domains cost around 10-20 dollars, however, you will have to pay an additional fee for privacy and protection. You can opt out of this. If your website is for a larger store, or company, the last option will fit your needs a little bit better. There is also always Shopify which can range from $30-300 dollars a month, with a 14-day free trial.
 </p>
         <div id="Footer">
@@ -203,7 +256,33 @@ Use colorful photos that aren’t straight from shutterstock. People like to see
         <a href="https://www.brainpop.com" target="_blank">brainpop.com<br></a>
         <a href="https://www.katescott.co/blog/web-design-tips 
 " target="_blank">katescott.co<br></a>
-        
+        <a href="https://www.w3schools.com
+" target="_blank">W3schools<br></a>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
         
         </div>
     </body>
